@@ -1,39 +1,101 @@
-# 🥋 WebDojo
 
-![WebDojo Cover](.github/cover.png)
+# 📘 Documentação de Testes Automatizados - WebDojo (Cypress)
 
-## 🚀 Sobre o Projeto
+Este repositório contém os testes automatizados da aplicação **WebDojo**, utilizando o framework [Cypress](https://www.cypress.io/).
 
-O **WebDojo** é um aplicativo exclusivo para os alunos do **Curso Ninja do Cypress**, ministrado pelo mestre **Fernando Papito**! 🥷💻 Ele foi criado para ser um **campo de treinamento prático**, onde os alunos podem aprimorar suas habilidades em automação de testes com desafios e exercícios focados no **Cypress**.
+## 📂 Estrutura do Projeto
 
-🛠️ Tecnologias Utilizadas
+```
+WEBDOJO/
+├── web/                          # Código da aplicação WebDojo
+├── cypress/
+│   ├── fixtures/                 # Arquivos de dados simulados (mock)
+│   │   ├── cep.json
+│   │   ├── consultancy.json
+│   │   └── document.pdf
+│   ├── support/
+│   │   └── actions/
+│   │       └── consultancy.actions.js
+│   ├── commands.js              # Comandos customizados para Cypress
+│   ├── e2e.js                   # Arquivos de testes E2E
+│   ├── helper.js                # Funções auxiliares
+│   └── utils.js                 # Funções utilitárias
+```
 
-- [x] Git & GitHub 🌍 (Controle de versão e repositório remoto)
-- [x] Bash (Linha de Comando) 💻 (Execução de scripts e comandos)
-- [x] Visual Studio Code 🖥️ (Editor de código recomendado)
-- [x] Node.js (22+) 🟢 (Runtime JavaScript)
-- [x] Gerenciador de pacotes (npm ou yarn) 📦 (Dependências do projeto)
-- [x] Cypress 🧪 (Framework de testes end-to-end)
-- [x] Docker & Docker Compose 🐳 (Ambiente isolado para execução)
-- [x] PostgreSQL 🗄 (Banco de dados relacional)
-- [x] Use Bruno 🔌 (Cliente de API para testes de requisições)
+## 🚀 Como Executar o Projeto
 
-## 📖 Como Usar
+### 1. Instalação das Dependências
 
-As instruções detalhadas de instalação e uso do **WebDojo** estão disponíveis dentro do **Curso Ninja do Cypress**.
+```bash
+npm install
+```
 
-🔗 **Acesse o curso e seja Ninja da Automação em Cypress!** 👉 [ninjadocypress.com.br](https://ninjadocypress.com.br)
+### 2. Executar a Aplicação Web
 
-## ⚠️ Contribuição
+A aplicação WebDojo está incluída no mesmo repositório. Para executá-la:
 
-O **WebDojo** é um ambiente **exclusivo** para os alunos do **Curso Ninja do Cypress**, e por isso, **não aceita contribuições externas**.
+```bash
+npm run dev
+```
 
-📢 Para suporte e dúvidas, utilize os canais oficiais do curso!
+A aplicação estará disponível em: `http://localhost:3000`
 
-## 🔒 Licença
+---
 
-Este projeto é **exclusivo para alunos** do **Curso Ninja do Cypress**. 🚫 O compartilhamento ou distribuição sem autorização é proibido.
+## 🧪 Executando os Testes
 
-------
+### Testes em modo headless (linha de comando)
 
-💙 Feito com dedicação e muito café por **Fernando Papito** e a equipe do **Curso Ninja do Cypress**. 🚀🔥
+```bash
+npm run test
+```
+
+### Testes com interface gráfica (modo interativo)
+
+```bash
+npm run test:ui
+```
+
+### Executar testes específicos
+
+#### Login - Desktop
+```bash
+npm run test:login
+```
+
+#### Login - Mobile (viewport simulando dispositivo móvel)
+```bash
+npm run test:login:mobile
+```
+
+---
+
+## 🗂️ Descrição das Pastas
+
+- **fixtures/**: Contém dados estáticos utilizados nos testes (mocks).
+- **support/actions/**: Agrupamento de ações reutilizáveis (ex: ações de consultoria).
+- **commands.js**: Customização de comandos do Cypress.
+- **e2e.js**: Entrada principal dos testes end-to-end.
+- **helper.js**: Funções auxiliares para facilitar a escrita dos testes.
+- **utils.js**: Funções utilitárias reutilizadas entre os testes.
+
+---
+
+## 📄 Dependências Relevantes
+
+Certifique-se de que os seguintes pacotes estão instalados:
+
+- `cypress`
+- `serve` (para rodar a aplicação com `npm run dev`)
+
+Instale com:
+
+```bash
+npm install cypress serve --save-dev
+```
+
+---
+
+## 🤝 Contribuição
+
+Sinta-se à vontade para contribuir com melhorias nos testes ou estrutura! Para isso, crie uma branch e envie um pull request.
