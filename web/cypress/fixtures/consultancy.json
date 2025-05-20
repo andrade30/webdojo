@@ -1,0 +1,44 @@
+{
+  "personal": {
+    "name": "Alessandro Santos",
+    "email": "santos@teste.com.br",
+    "phone": "92 98416-2190",
+    "consultancyType": "Individual",
+    "personType": "cpf",
+    "document": "06829681022",
+    "discoveryChannels": [
+      "Instagram",
+      "LinkedIn",
+      "Udemy",
+      "YouTube",
+      "Indicação de Amigo"
+    ],
+    "file": "./cypress/fixtures/document.pdf",
+    "description": "At vero eos et acusamus",
+    "techs": [
+      "Cypress",
+      "Selenium",
+      "WebDriverIO",
+      "Playwright",
+      "Robot Framework"
+    ],
+    "terms": true
+  },
+  "company": {
+    "name": "Alessandro Santos",
+    "email": "santos@teste.com.br",
+    "phone": "92 98416-2190",
+    "consultancyType": "In Company",
+    "personType": "cnpj",
+    "document": "14.923.337/0001-85",
+    "discoveryChannels": [
+      "LinkedIn"
+    ],
+    "file": "./cypress/fixtures/document.pdf",
+    "description": "At vero eos et acusamus",
+    "techs": [
+      "Cypress"
+    ],
+    "terms": true
+  }
+}
